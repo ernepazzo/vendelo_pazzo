@@ -26,8 +26,22 @@ class ProductsController < ApplicationController
   end
 
   def update
-    
+    @product = Product.find(params[:id])
+
+    if @product.update(product_params)
+      redirect_to products_path, notice: 'Product was successfully updated'
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+
+    redirect_to products_path, notice: 'Product deleted successfully', status: :see_other
+  end
+  
   
   private
   def product_params

@@ -1,8 +1,16 @@
-<h1>Products:</h1>
 
-<% @products.each do |product| %>
-  <%= link_to product_path(product), class: 'product' do %>
-    <h2><%= product.title %></h2>
-    <span><%= product.price %>$</span>
+
+<% if @products.empty? %>
+  <h1>Actualmente no hay productos</h1>
+
+<% else %>
+  <h1>Products:</h1>
+  
+  <% @products.each do |product| %>
+    <%= link_to product_path(product), class: 'product' do %>
+      <h2><%= product.title %></h2>
+      <span><%= product.price %>$</span>
+    <% end %>
   <% end %>
+
 <% end %>

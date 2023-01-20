@@ -55,4 +55,34 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select 'form'
   end
+
+  test 'allow to update a product' do
+    patch product_path(products(:one)), params: {
+      product: {
+        price: 123
+      }
+    }
+
+    assert_redirected_to products_path
+    assert_equal flash[:notice], 'Product was successfully updated'
+  end
+
+  test 'does not allow to update a product with an invalid fiel' do
+    patch product_path(products(:one)), params: {
+      product: {
+        price: nil
+      }
+    }
+
+    assert_response :unprocessable_entity
+  end
+
+  test 'can delete products' do
+    assert_difference('Product.count', -1) do
+      delete product_path(products(:one))
+    end
+
+    assert_redirected_to products_path
+    assert_equal flash[:notice], 'Product deleted successfully'
+  end
 end
