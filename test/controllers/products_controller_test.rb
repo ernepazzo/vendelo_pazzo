@@ -83,6 +83,6 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to products_path
-    assert_equal flash[:notice], 'Product deleted successfully'
+    assert_equal flash[:notice], 'Product was successfully deleted'
   end
 end
