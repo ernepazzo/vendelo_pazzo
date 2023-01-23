@@ -4,32 +4,47 @@ es:
   shared:
     header:
       add: 'Añadir producto'
-      categories: 'Categorías'
+      login: 'Acceso'
+      register: 'Registro'
+      logout: 'Salir'
   activerecord:
     models:
       product: Producto
+      user: Usuario
+      category: Categoría
     attributes:
       product:
         title: 'Título'
         description: 'Descripción'
         price: 'Precio'
         photo: 'Foto'
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: 'no puede estar vacío'
-            description:
-              blank: 'no puede estar vacío'
-            price:
-              blank: 'no puede estar vacío'
-            category:
-              required: 'es requerida'
+      user:
+        email: 'Correo electrónico'
+        username: 'usuario'
+        password: 'contraseña'
+      category:
+        name: 'Nombre'
   common:
     confirm: 'Estás seguro?'
     back: 'Ir atrás'
+    not_logged_in: 'Tienes que hacer login o crearte una cuenta'
+    not_authorized: 'No tienes permisos para esta acción'
+  authentication:
+    users:
+      create:
+        created: 'Tu cuenta ha sido creada!'
+    sessions:
+      create:
+        created: 'Bienvenido!'
+        failed: 'Login inválido'
+      destroy:
+        destroy: 'Tu sesión ha terminado! Hasta la próxima'
   products:
+    form:
+      new:
+        button_submit: 'Crear producto'
+      edit:
+        button_submit: 'Actualizar producto'
     index:
       title: 'Productos:'
       all: 'Todos'
@@ -39,10 +54,14 @@ es:
       expensive: 'Más caros'
       cheaper: 'Más baratos'
       newest: 'Añadidos recientemente'
+    show:
+      edit: 'Actualizar producto'
+      delete: 'Eliminar producto'
     edit:
       title: 'Editar producto'
     new:
       title: 'Añadir producto'
+      button_submit: 'CrearRRR producto'
     create:
       created: 'Tu producto se ha creado correctamente'
     update:

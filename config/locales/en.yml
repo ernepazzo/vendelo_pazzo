@@ -4,32 +4,47 @@ en:
   shared:
     header:
       add: 'Add product'
-      categories: 'Categories'
+      login: 'Login'
+      register: 'Register'
+      logout: 'Logout'
   activerecord:
     models:
       product: Product
+      user: User
+      category: Category
     attributes:
       product:
         title: 'Title'
         description: 'Description'
         price: 'Price'
         photo: 'Photo'
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: 'can not be blank'
-            description:
-              blank: 'can not be blank'
-            price:
-              blank: 'can not be blank'
-            category:
-              required: 'is required'
+      user:
+        email: 'Email'
+        username: 'Username'
+        password: 'Password'
+      category:
+        name: 'Name'
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
+    not_logged_in: 'You have to login or create an account'
+    not_authorized: 'You don not have permission for this action'
+  authentication:
+    users:
+      create:
+        created: 'Your account has been created!'
+    sessions:
+      create:
+        created: 'Welcome!'
+        failed: 'Invalid login!'
+      destroy:
+        destroy: 'Session ended. Bye!'
   products:
+    form:
+      new:
+        button_submit: 'Create product'
+      edit:
+        button_submit: 'Update product'
     index:
       title: 'Products:'
       all: 'All'
@@ -39,6 +54,9 @@ en:
       expensive: 'Expensive first'
       cheaper: 'Cheaper first'
       newest: 'Recently added'
+    show:
+      edit: 'Update product'
+      delete: 'Delete product'
     edit:
       title: 'Edit product'
     new:
