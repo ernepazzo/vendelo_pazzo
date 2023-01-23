@@ -1,4 +1,6 @@
 en:
+  app_name: 'SellIT Pazzo'
+  meta_title: 'Buy and sell second hand products!'
   shared:
     header:
       add: 'Add product'

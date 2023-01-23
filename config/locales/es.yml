@@ -1,4 +1,6 @@
 es:
+  app_name: 'Vendelo Pazzo'
+  meta_title: 'Compra y vende productos de segunda mano!'
   shared:
     header:
       add: 'Añadir producto'
