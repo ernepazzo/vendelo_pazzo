@@ -22,12 +22,21 @@ es:
               blank: 'no puede estar vacío'
             price:
               blank: 'no puede estar vacío'
+            category:
+              required: 'es requerida'
   common:
     confirm: 'Estás seguro?'
     back: 'Ir atrás'
   products:
     index:
       title: 'Productos:'
+      all: 'Todos'
+      min_price: 'Precio mínimo'
+      max_price: 'Precio máximo'
+      query_text: 'Qué quieres buscar?'
+      expensive: 'Más caros'
+      cheaper: 'Más baratos'
+      newest: 'Añadidos recientemente'
     edit:
       title: 'Editar producto'
     new:

@@ -22,12 +22,21 @@ en:
               blank: 'can not be blank'
             price:
               blank: 'can not be blank'
+            category:
+              required: 'is required'
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
   products:
     index:
       title: 'Products:'
+      all: 'All'
+      min_price: 'Min price'
+      max_price: 'Max price'
+      query_text: 'What do you want to search?'
+      expensive: 'Expensive first'
+      cheaper: 'Cheaper first'
+      newest: 'Recently added'
     edit:
       title: 'Edit product'
     new:
