@@ -7,6 +7,7 @@ en:
       login: 'Login'
       register: 'Register'
       logout: 'Logout'
+      favorites: 'My favorites'
   activerecord:
     models:
       product: Product
@@ -29,6 +30,7 @@ en:
     back: 'Go back'
     not_logged_in: 'You have to login or create an account'
     not_authorized: 'You don not have permission for this action'
+    not_found: 'Not found'
   authentication:
     users:
       create:
@@ -57,6 +59,7 @@ en:
     show:
       edit: 'Update product'
       delete: 'Delete product'
+      view_more_products: 'View more products by %{username}'
     edit:
       title: 'Edit product'
     new:
@@ -84,3 +87,6 @@ en:
       updated: 'You category updated successfully'
     destroy:
       destroyed: 'You category destroyed successfully'
+  favorites:
+    index:
+      title: 'My favorites'
